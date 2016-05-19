@@ -1,0 +1,1 @@
+protoc -I=.    --lua_out=.   --plugin=protoc-gen-lua="F:\soft\google protobuf\protoc-gen-lua-master\plugin\protoc-gen-lua.bat"   addressbook.proto 

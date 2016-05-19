@@ -1,0 +1,37 @@
+package tutorial;
+
+message Person {
+	required string name = 1;
+	required int64 id = 2;
+	optional string email = 3;
+
+	enum PhoneType {
+		MOBILE = 0;
+		HOME = 1;
+		WORK = 2;
+	}
+
+	message PhoneNumber {
+		required string number = 1;
+		optional PhoneType type = 2 [default = HOME];
+	}
+
+	repeated PhoneNumber phone = 4;
+
+	required int32 tint32 = 5;
+	required int64 tint64 = 6;
+	required uint32 tuint32 = 7;
+	required uint64 tuint64 = 8;
+	required sint32 tsint32 = 9;
+	required sint64 tsint64 = 10;
+	required bool tbool = 11;
+	required fixed64 tfixed64 = 12;
+	required sfixed64 tsfixed64 = 13;
+	required double tdouble = 14;
+	required fixed32 tfixed32 = 15;
+	required sfixed32 tsfixed32 = 16;
+	required float tfloat = 17;
+}
+message AddressBook {
+  repeated Person person = 1;
+}
